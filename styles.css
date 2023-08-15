@@ -163,8 +163,6 @@ li {
         padding-top: 1.875rem;
         flex-direction: column;
         justify-content: space-between;
-        /* gap: 1rem; */
-        /* padding-left: 1rem; */
         max-width: 25rem;
     }
 
