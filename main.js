@@ -8,7 +8,7 @@ const value = input.value;
 button1.addEventListener('click', displayMessage(), false);
 
 function displayMessage(event) {
-    event.preventDefault();
+    // event.preventDefault();
     popUp.classList.add("popup");
 }
 
