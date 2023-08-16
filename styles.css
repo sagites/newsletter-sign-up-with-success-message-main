@@ -1,6 +1,7 @@
 * {
     /* Primary coloursK */
     --primary-tomato: hsl(4, 100%, 67%);
+    --secondary-tomato: hsla(4, 100%, 67%, 0.2);
 
     /* Neutral colours */
     --dark-slate-grey: hwb(234 14% 74%);
@@ -117,11 +118,29 @@ li {
         border-width: .0625rem;
     }
 
+    input:required:invalid {
+        border-color: #c00000;
+    }
+
+    input:invalid {
+        background-color: #ffdddd;
+    }
+    
+    input:focus {
+        margin: 0;
+        border: 0;
+    }
+
+    /* input:invalid {
+        border: var(--primary-tomato);
+        background-color: var(--primary-tomato);
+    } */
+
     input::placeholder {
         justify-content: center;
     }
 
-    #inputEmail {
+    #email {
         border-radius: 6px ;
         height: 3.25rem;
     }
@@ -283,6 +302,22 @@ li {
         padding: 1rem 1rem;
     }
 
+    /* input:required:invalid {
+        border-color: var(--primary-tomato);
+    } */
+
+
+    input:invalid {
+        background-color: #ffdddd;
+    }
+
+    input:invalid {
+        border: var(--primary-tomato);
+        background-color: var(--secondary-tomato);
+        color: var(--primary-tomato);
+        border-color: var(--primary-tomato);
+    }
+
     .btn {
         background-color: var(--dark-slate-grey);
         border: none;
@@ -293,6 +328,7 @@ li {
         display: inline-block;
         /* margin: 4px 2px; */
         cursor: pointer;
+        margin: 0;
         border-radius: .375rem;
         width: 100%;
     }
