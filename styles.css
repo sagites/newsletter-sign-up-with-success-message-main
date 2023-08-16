@@ -45,24 +45,27 @@ li {
 @media screen and (min-width: 375px) and (max-width: 750px) {
     
     body {
+        border: 0;
         margin: 0;
         padding: 0;
-        display: grid;
+        display: flex;
         width: 100%;
     }
 
     main {
         width: 100%;
-        display: grid;
-        grid-template-rows: 0.74fr 1fr;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .site-picture {
+        display: flex;
         width: 100%;
     }
 
     .updated-content {
-        max-width: 310px;
+        width: 100%;
+        padding: .9375rem;
         margin: 0 auto;
         align-items: center;
     }
@@ -70,6 +73,13 @@ li {
     .updated-content h1 {
         font-size: 2.5rem;
         margin: 1.25rem 0;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        padding: 0;
     }
 
     ul {
@@ -111,9 +121,51 @@ li {
         justify-content: center;
     }
 
-    #input_email {
+    #inputEmail {
         border-radius: 6px ;
         height: 3.25rem;
+    }
+
+    .btn-holder {
+        margin-top: 1.25rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: .625rem;
+        border-radius: .5rem;
+        background-color: var(--dark-slate-grey);
+        height: 3.25rem;
+    }
+
+    /* PopUp content  */
+
+    .signup-success {
+        position: absolute;
+        /* top: 25%; */
+        /* left: 25%; */
+        background: var(--neutral-white);
+        place-items: center;
+        /* width: 100%; */
+        /* padding-top: 25rem; */
+        padding-bottom: 2rem;
+        visibility: hidden;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 1fr;
+        ma
+
+    }
+
+    .popup{
+        visibility: visible;
+        top: 50%;
+    }
+
+    .show {
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
 }
 
@@ -251,6 +303,8 @@ li {
         box-shadow: 40px;
     }
 
+    /* Popup content  */
+
     .signup-success {
         background-color: var(--neutral-white);
         max-width: 400px;
@@ -260,18 +314,27 @@ li {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        visibility: hidden;
         transition: transform 0.4s, top 0.4s;
-    }
-
-    .popup{
-        visibility: visible;
-        top: 50%;
+        z-index: 2;
+        opacity:
     }
 
     .signup-success-title {
         line-height: 1;
         font-size: 2.5rem;
+    }
+
+    .signup-success {
+        visibility: hidden;
+    }
+    
+    .popup{
+        visibility: visible;
+        top: 50%;
+    }
+
+    .show {
+        visibility: hidden;
     }
 }
 
