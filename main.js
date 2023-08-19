@@ -6,12 +6,11 @@ const mail = document.querySelector('#mail b');
 const show = document.querySelector('.container');
 // const image = document.querySelector('section .image')
 
-button1.addEventListener('submit', displayElement(), false);
+button1.addEventListener('submit', (event) => {
+    event.preventDefault();
+    popUp.classList.add('popup');
+}, false);
 
-function displayElement(event) {
-    if (input.value === '') {
-        
-    }
-}
+
 
 button2.addEventListener('submit', remeoveElement(), false);
